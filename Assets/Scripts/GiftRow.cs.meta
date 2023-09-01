@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b340ced228772594a90b374d667f7148
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - objectToSpawn: {instanceID: 0}
+  - team1Spawner: {instanceID: 0}
+  - team2Spawner: {instanceID: 0}
+  - txtUserName: {instanceID: 0}
+  - txtAmount: {instanceID: 0}
+  - imgUserProfile: {instanceID: 0}
+  - imgGiftIcon: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
