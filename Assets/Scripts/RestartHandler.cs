@@ -21,6 +21,8 @@ public class RestartHandler : MonoBehaviour
     public GameObject Team2Target1;
     public GameObject Team2Target2;
     public GameObject Team2Target3;
+    public TextMeshProUGUI Team1Score;
+    public TextMeshProUGUI Team2Score;
     
     
     private bool restartEnded=true;
@@ -43,6 +45,11 @@ public class RestartHandler : MonoBehaviour
             giftSpawnPane3.SetActive(false);
             giftSpawnPane4.SetActive(false);
             teamText.SetText("OHIO");
+            
+            String team1ScoreText = Team1Score.text;
+            int team1ScoreTextInt = Int32.Parse(team1ScoreText);
+            Team1Score.SetText((team1ScoreTextInt+1).ToString());
+            
             StartCoroutine(timer());
         }
         else if (Team2Spawner.target3Destroyed && Team2Spawner.target2Destroyed && Team2Spawner.target1Destroyed&&restartEnded)
@@ -55,6 +62,11 @@ public class RestartHandler : MonoBehaviour
             giftSpawnPane3.SetActive(false);
             giftSpawnPane4.SetActive(false);
             teamText.SetText("SKIBIDI");
+            
+            String team2ScoreText = Team2Score.text;
+            int team2ScoreTextInt = Int32.Parse(team2ScoreText);
+            Team2Score.SetText((team2ScoreTextInt+1).ToString());
+            
             StartCoroutine(timer());
         }
     }

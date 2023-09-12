@@ -166,7 +166,7 @@ namespace TikTokLiveUnity.Example
             }
             
             f = f.normalized;
-            f = f * 8;
+            f = f * 3;
             rb.AddForce(f);
             Quaternion lookRotation = Quaternion.LookRotation(f.normalized);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5f * Time.deltaTime);
