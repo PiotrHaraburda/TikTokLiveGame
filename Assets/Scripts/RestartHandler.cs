@@ -44,7 +44,7 @@ public class RestartHandler : MonoBehaviour
             giftSpawnPane2.SetActive(false);
             giftSpawnPane3.SetActive(false);
             giftSpawnPane4.SetActive(false);
-            teamText.SetText("OHIO");
+            teamText.SetText("DZIEWCZYNY");
             
             String team1ScoreText = Team1Score.text;
             int team1ScoreTextInt = Int32.Parse(team1ScoreText);
@@ -61,7 +61,7 @@ public class RestartHandler : MonoBehaviour
             giftSpawnPane2.SetActive(false);
             giftSpawnPane3.SetActive(false);
             giftSpawnPane4.SetActive(false);
-            teamText.SetText("SKIBIDI");
+            teamText.SetText("CHŁOPAKI");
             
             String team2ScoreText = Team2Score.text;
             int team2ScoreTextInt = Int32.Parse(team2ScoreText);

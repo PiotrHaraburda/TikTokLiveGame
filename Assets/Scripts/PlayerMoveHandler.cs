@@ -34,9 +34,22 @@ namespace TikTokLiveUnity.Example
         private GameObject enemyPlayer=null;
         private Vector3 f = new Vector3();
         private Vector3 enemyPlayerPos = new Vector3();
+        
+        Gradient healthbarGradient = new Gradient();
 
         void Start()
         {
+            var redColor = new GradientColorKey(Color.red, 0.0f);
+            var yellowColor = new GradientColorKey(Color.yellow, 0.6f);
+            var greenColor = new GradientColorKey(Color.green, 1.0f);
+
+            var alphas = new GradientAlphaKey[2];
+            alphas[0] = new GradientAlphaKey(1.0f, 0.0f);
+            alphas[1] = new GradientAlphaKey(1.0f, 0.0f);
+
+            healthbarGradient.colorKeys = new GradientColorKey[]{redColor,yellowColor,greenColor};
+            healthbarGradient.alphaKeys = alphas;
+            
             if (maxHealth == 1500f)
             {
                 Team2Target1Pos.y = 5;
@@ -77,7 +90,6 @@ namespace TikTokLiveUnity.Example
             currentHealth = Team1PlayerHealthbar.fillAmount*maxHealth;
             
             updateHealthbar(Team1PlayerHealthbar,maxHealth,currentHealth);
-
         }
 
         public static Image getHealthbar(GameObject g)
@@ -318,6 +330,7 @@ namespace TikTokLiveUnity.Example
         void updateHealthbar(Image healthbar,float maxHealth,float currentHealth)
         {
             healthbar.fillAmount = currentHealth / maxHealth;
+            healthbar.color = healthbarGradient.Evaluate(currentHealth / maxHealth);
         }
     }
 }
